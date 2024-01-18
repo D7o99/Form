@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نموذج الإدخال</title>
-</head>
-<body>
-    <form action="process_form.php" method="post" enctype="multipart/form-data">
-        <label for="name">الاسم:</label>
-        <input type="text" name="name" required><br>
-
-        <label for="phone">رقم الجوال:</label>
-        <input type="tel" name="phone" required><br>
-
-        <label for="dropdown">قائمة منسدلة:</label>
-        <select name="dropdown">
-            <option value="option1">خيار 1</option>
-            <option value="option2">خيار 2</option>
-            <!-- أضف المزيد من الخيارات حسب الحاجة -->
-        </select><br>
-
-        <label for="files">رفع ملفات:</label>
-        <input type="file" name="files[]" multiple><br>
-
-        <input type="submit" value="إرسال">
-    </form>
-</body>
-</html>
+<form action="results.php" method="post">
+  <input type="text" name="name" placeholder="الاسم">
+  <input type="text" name="phone" placeholder="رقم الجوال">
+  <select name="list">
+    <option value="1">خيار 1</option>
+    <option value="2">خيار 2</option>
+    <option value="3">خيار 3</option>
+  </select>
+  <input type="submit" value="إرسال">
+</form>
