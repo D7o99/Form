@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>استمارة طلب خدمة إعاشة | Catering Service Request Form</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+            margin: 0 auto;
+            padding: 30px;
+            max-width: 800px;
+            direction: rtl;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #a6192e;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #eee;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .submit {
+            background-color: #a6192e;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .note {
+            color: #a6192e;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .error {
+            border: 2px solid #ff0000 !important;
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(5px); }
+            50% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+            color: #a6192e;
+			
+        }
+
+   .logo {
+      display: block;
+      margin: 30px auto 10px auto;
+      max-width: 180px;
+    }
+
+    .card {
+      margin-top: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .card-header {
+      background-color: #f7931e;
+      color: #fff;
+      font-size: 1.3rem;
+      text-align: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+
+    </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://i.ibb.co/CKQzXxFx/929bcbcb-4de0-4eb4-8d45-386549bb37d0-removebg-preview.png" alt="Mubtaker Logo" class="logo">
+    <div class="card">
+      <div class="card-header">
+        استمارة طلب خدمة إعاشة | Catering Service Request Form
+      </div>
+      <div class="card-body">
+
+<p>مرحبًا في شركة مبتكر الدولية، يُرجى تعبئة النموذج أدناه لتحديد نوع الخدمة المطلوبة، وسنتواصل معكم خلال وقت قصير.</p>
+<p>Welcome to Mubtaker International. Please fill out the form below to select your desired service, and we will contact you shortly.</p>
+
+<form id="mezform">
+    <label>الاسم الكامل | Full Name</label>
+    <input type="text" name="full_name" required>
+
+    <label>رقم الجوال | Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label>البريد الإلكتروني (اختياري) | Email Address (Optional)</label>
+    <input type="email" name="email">
+
+    <label>المدينة | City</label>
+    <input type="text" name="city" required>
+
+    <label>عدد الأشخاص | Number of People</label>
+    <input type="number" name="people" min="20" required>
+
+    <label>تاريخ الخدمة المطلوب | Desired Service Date</label>
+    <input type="date" name="date" required>
+
+
+
+    <label>نوع الخدمة المطلوبة | Service Type</label>
+    <div class="checkbox-group">
+        <label><input type="checkbox" name="service" value="‎بوفيه ميز – قطاع الأعمال | Mez Buffet – "> بوفيه ميز – قطاع الأعمال | Mez Buffet – Corporate</label>  
+ <div class="text-muted ms-4" style="font-size:13px;">يشمل وجبات كاملة مع مقبلات وحلويات لاجتماعات الشركات. | Includes full meals with appetizers and desserts for corporate meetings.</div>
+        <br><br>
+
+        <label><input type="checkbox" name="service" value="‎بوفيه ميز – القطاع السكني | Mez Buffet – Residential"> بوفيه ميز – القطاع السكني | Mez Buffet – Residential</label>
+         <div class="text-muted ms-4" style="font-size:13px;">بوفيه منزلي راقٍ للمناسبات الخاصة والعائلية. | Elegant residential buffet for family and private occasions.</div>
+  </div>
+<br><br>
+
+        <label><input type="checkbox" name="service" value="‎ كوفي بريك كلاسيكي | Classic Coffee Break"> كوفي بريك كلاسيكي | Classic Coffee Break</label>
+      <div class="text-muted ms-4" style="font-size:13px;">قهوة، شاي، عصائر، ومخبوزات. | Coffee, tea, juices, and pastries.</div>
+  </div>
+<br><br>
+
+        <label><input type="checkbox" name="service" value="‎وجبات ماميا اليومية | MAMIA Daily Meals"> وجبات ماميا اليومية | MAMIA Daily Meals</label>
+        <small>وجبات متوازنة للموظفين أو العمال تقدم حسب جدول.</small><br><br>
+
+        <label><input type="checkbox" name="service" value="‎وجبات صحية أو مخصصة | Custom/Healthy Meals"> وجبات صحية أو مخصصة | Custom/Healthy Meals</label>
+      <div class="text-muted ms-4" style="font-size:13px;">وجبات متوازنة للموظفين أو العمال تقدم حسب جدول. | Balanced meals for staff or workers served on schedule.</div>
+  </div>
+<br><br>
+
+        <label><input type="checkbox" name="service" value="‎أخرى | Other"> أخرى | Other</label>
+
+ <div class="text-muted ms-4" style="font-size:13px;">يرجى تحديد الخدمة يدويًا. | Please specify the service manually.</div>
+        <input type="text" name="other_service">
+    </div>
+
+
+    <label>الموقع أو العنوان الكامل | Full Address</label>
+    <textarea name="address" rows="3" required></textarea>
+
+    <label>ملاحظات إضافية | Additional Notes (Optional)</label>
+    <textarea name="notes" rows="3"></textarea>
+
+    <div class="loading" id="loadingIndicator">
+        جاري معالجة طلبك...<br>
+        Processing your request...
+    </div>
+
+    <button type="submit" class="submit" id="submitButton">أرسل الطلب الآن | Submit Request</button>
+
+     <div class="note">🔺 لا نقبل الطلبات التي تقل عن 20 شخصًا.<br>⚠️ We do not accept orders for fewer than 20 people.</div>
+</form>
+
+<script>
+document.getElementById('mezform').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitButton = document.getElementById('submitButton');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    
+    try {
+        // التحقق من الحقول المطلوبة
+        const requiredFields = document.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('error');
+            } else {
+                field.classList.remove('error');
+            }
+        });
+
+        if (!isValid) {
+            alert('الرجاء ملء جميع الحقول المطلوبة');
+            return;
+        }
+
+        // إظهار مؤشر التحميل
+        submitButton.style.display = 'none';
+        loadingIndicator.style.display = 'block';
+
+        // جمع البيانات من النموذج
+        const formData = {
+            fullName: document.querySelector('[name="full_name"]').value,
+            phone: document.querySelector('[name="phone"]').value,
+            email: document.querySelector('[name="email"]').value || 'N/A',
+            city: document.querySelector('[name="city"]').value,
+            people: document.querySelector('[name="people"]').value,
+            date: document.querySelector('[name="date"]').value,
+            address: document.querySelector('[name="address"]').value,
+            notes: document.querySelector('[name="notes"]').value || 'N/A',
+            services: Array.from(document.querySelectorAll('[name="service"]:checked')).map(s => s.value),
+            otherService: document.querySelector('[name="other_service"]').value || 'N/A'
+        };
+
+        // إرسال إلى واتساب
+        await sendToWhatsApp(formData);
+        
+        // إرسال إلى البريد الإلكتروني
+        await sendToEmail(formData);
+        
+        // إعادة تعيين النموذج بعد النجاح
+        this.reset();
+        
+        alert('تم إرسال طلبك بنجاح! سنتواصل معك قريباً.');
+        
+    } catch (error) {
+        console.error('Error:', error);
+        alert(`حدث خطأ أثناء إرسال الطلب: ${error.message}`);
+    } finally {
+        submitButton.style.display = 'block';
+        loadingIndicator.style.display = 'none';
+    }
+});
+
+async function sendToWhatsApp(formData) {
+    // معالجة الخدمات المختارة
+    const services = formData.services.join('%0A- ');
+    const finalServices = services + (formData.otherService !== 'N/A' ? '%0A- ' + formData.otherService : '');
+
+    // إنشاء نص الرسالة
+    const message = 
+        `*طلب جديد استمارة طلب خدمةاعاشة- شركة مبتكر الدولية*%0A%0A` +
+        `*الاسم الكامل:* ${formData.fullName}%0A` +
+        `*رقم الجوال:* ${formData.phone}%0A` +
+        `*البريد الإلكتروني:* ${formData.email}%0A` +
+        `*المدينة:* ${formData.city}%0A` +
+        `*الخدمات المطلوبة:*%0A- ${finalServices}%0A` +
+        `*عدد الأشخاص:* ${formData.people}%0A` +
+        `*التاريخ المطلوب:* ${formData.date}%0A` +
+        `*العنوان الكامل:* ${formData.address}%0A` +
+        `*ملاحظات إضافية:* ${formData.notes}`;
+
+    // إرسال عبر واتساب
+    const whatsappNumber = "966571745300"; // استبدل برقم الواتساب المطلوب (بدون + أو مسافات)
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    
+    // محاولة فتح الرابط في نافذة جديدة
+    const newWindow = window.open(whatsappUrl, '_blank');
+    
+    // إذا تم منع النافذة الجديدة
+    if (!newWindow || newWindow.closed) {
+        // طريقة احتياطية
+        window.location.href = whatsappUrl;
+    }
+}
+
+async function sendToEmail(formData) {
+    // هنا نستخدم خدمة FormSubmit أو أي خدمة أخرى لإرسال البريد
+    // يمكنك استبدال هذا الجزء بخدمة البريد الخاصة بك
+    
+    const emailData = {
+        service: 'gmail', // أو أي خدمة بريد أخرى
+        template: 'contact_form',
+        userId: 'YOUR_EMAILJS_USER_ID', // استبدل بمعلوماتك
+        templateId: 'YOUR_EMAILJS_TEMPLATE_ID',
+        accessToken: 'YOUR_EMAILJS_ACCESS_TOKEN'
+    };
+
+    // إذا كنت تريد استخدام EmailJS (https://www.emailjs.com/)
+    if (typeof emailjs !== 'undefined') {
+        await emailjs.send(
+            emailData.service,
+            emailData.templateId,
+            {
+                full_name: formData.fullName,
+                phone: formData.phone,
+                email: formData.email,
+                city: formData.city,
+                services: formData.services.join(', ') + 
+                         (formData.otherService !== 'N/A' ? ', ' + formData.otherService : ''),
+                people: formData.people,
+                date: formData.date,
+                address: formData.address,
+                notes: formData.notes
+            },
+            emailData.userId
+        );
+    } else {
+        // طريقة بديلة باستخدام FormSubmit (https://formsubmit.co/)
+        const formSubmitEndpoint = 'https://formsubmit.co/ajax/contact@mubtaker.sa';
+        
+        const response = await fetch(formSubmitEndpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: formData.fullName,
+                phone: formData.phone,
+                email: formData.email,
+                city: formData.city,
+                services: formData.services.join(', ') + 
+                         (formData.otherService !== 'N/A' ? ', ' + formData.otherService : ''),
+                people: formData.people,
+                date: formData.date,
+                address: formData.address,
+                notes: formData.notes,
+                _subject: 'طلب جديد - شركة مبتكر الدولية'
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error('فشل في إرسال البريد الإلكتروني');
+        }
+    }
+}
+</script>
+
+<!-- إذا كنت تستخدم EmailJS، أضف هذا السكربت -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init('YOUR_EMAILJS_USER_ID');
+</script> -->
+
+</body>
+</html>
