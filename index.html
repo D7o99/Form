@@ -5,7 +5,7 @@
     <title>استمارة طلب خدمة إعاشة | Catering Service Request Form</title>
     <style>
         body {
-            font-family: Tahoma, Arial, sans-serif;
+            font-family: 'Tahoma', sans-serif;
             background-color: #fdfdfd;
             color: #333;
             margin: 0 auto;
@@ -33,11 +33,11 @@
             margin-top: 10px;
             padding: 10px;
             border: 1px solid #eee;
-            background-color: #f9f9f9;
+            background-color: #e5e4e2;
             border-radius: 8px;
         }
         .submit {
-            background-color: #a6192e;
+            background-color: #f7931e;
             color: #fff;
             border: none;
             padding: 12px;
@@ -108,7 +108,8 @@
 <p>مرحبًا في شركة مبتكر الدولية، يُرجى تعبئة النموذج أدناه لتحديد نوع الخدمة المطلوبة، وسنتواصل معكم خلال وقت قصير.</p>
 <p>Welcome to Mubtaker International. Please fill out the form below to select your desired service, and we will contact you shortly.</p>
 
-<form id="mezform">
+
+<form id="mezform" action="https://formsubmit.co/contact@mubtaker.sa" method="POST" >
     <label>الاسم الكامل | Full Name</label>
     <input type="text" name="full_name" required>
 
@@ -132,30 +133,31 @@
     <label>نوع الخدمة المطلوبة | Service Type</label>
     <div class="checkbox-group">
         <label><input type="checkbox" name="service" value="‎بوفيه ميز – قطاع الأعمال | Mez Buffet – "> بوفيه ميز – قطاع الأعمال | Mez Buffet – Corporate</label>  
- <div class="text-muted ms-4" style="font-size:13px;">يشمل وجبات كاملة مع مقبلات وحلويات لاجتماعات الشركات. | Includes full meals with appetizers and desserts for corporate meetings.</div>
+ <small class="text-muted ms-4" style="font-size:13px;">يشمل وجبات كاملة مع مقبلات وحلويات لاجتماعات الشركات. | Includes full meals with appetizers and desserts for corporate meetings.</small>
         <br><br>
 
+<div>
         <label><input type="checkbox" name="service" value="‎بوفيه ميز – القطاع السكني | Mez Buffet – Residential"> بوفيه ميز – القطاع السكني | Mez Buffet – Residential</label>
-         <div class="text-muted ms-4" style="font-size:13px;">بوفيه منزلي راقٍ للمناسبات الخاصة والعائلية. | Elegant residential buffet for family and private occasions.</div>
+         <small class="text-muted ms-4" style="font-size:13px;">بوفيه منزلي راقٍ للمناسبات الخاصة والعائلية. | Elegant residential buffet for family and private occasions.</small>
   </div>
 <br><br>
 
         <label><input type="checkbox" name="service" value="‎ كوفي بريك كلاسيكي | Classic Coffee Break"> كوفي بريك كلاسيكي | Classic Coffee Break</label>
-      <div class="text-muted ms-4" style="font-size:13px;">قهوة، شاي، عصائر، ومخبوزات. | Coffee, tea, juices, and pastries.</div>
-  </div>
+      <small class="text-muted ms-4" style="font-size:13px;">قهوة، شاي، عصائر، ومخبوزات. | Coffee, tea, juices, and pastries.</small>
 <br><br>
 
         <label><input type="checkbox" name="service" value="‎وجبات ماميا اليومية | MAMIA Daily Meals"> وجبات ماميا اليومية | MAMIA Daily Meals</label>
         <small>وجبات متوازنة للموظفين أو العمال تقدم حسب جدول.</small><br><br>
 
         <label><input type="checkbox" name="service" value="‎وجبات صحية أو مخصصة | Custom/Healthy Meals"> وجبات صحية أو مخصصة | Custom/Healthy Meals</label>
-      <div class="text-muted ms-4" style="font-size:13px;">وجبات متوازنة للموظفين أو العمال تقدم حسب جدول. | Balanced meals for staff or workers served on schedule.</div>
+      <small class="text-muted ms-4" style="font-size:13px;">وجبات متوازنة للموظفين أو العمال تقدم حسب جدول. | Balanced meals for staff or workers served on schedule.</small>
   </div>
 <br><br>
 
         <label><input type="checkbox" name="service" value="‎أخرى | Other"> أخرى | Other</label>
+</div>
 
- <div class="text-muted ms-4" style="font-size:13px;">يرجى تحديد الخدمة يدويًا. | Please specify the service manually.</div>
+ <small class="text-muted ms-4" style="font-size:13px;">يرجى تحديد الخدمة يدويًا. | Please specify the service manually.</small>
         <input type="text" name="other_service">
     </div>
 
